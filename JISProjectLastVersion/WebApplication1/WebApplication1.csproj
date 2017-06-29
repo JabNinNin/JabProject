@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE774F01-F01A-4016-B85D-1BD5534732FC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\TSAPP.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminAddMembers.aspx.cs">
+      <DependentUpon>AddminAddMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminAddMembers.aspx.designer.cs">
+      <DependentUpon>AddminAddMembers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminAddProject.aspx.cs">
+      <DependentUpon>AddminAddProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminAddProject.aspx.designer.cs">
+      <DependentUpon>AddminAddProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminViewTS.aspx.cs">
+      <DependentUpon>AddminViewTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\AddminViewTS.aspx.designer.cs">
+      <DependentUpon>AddminViewTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\Consult.Master.cs">
+      <DependentUpon>Consult.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\Consult.Master.designer.cs">
+      <DependentUpon>Consult.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerViewTS.aspx.cs">
+      <DependentUpon>ManagerViewTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerViewTS.aspx.designer.cs">
+      <DependentUpon>ManagerViewTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerCreateTS.aspx.cs">
+      <DependentUpon>ManagerCreateTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerCreateTS.aspx.designer.cs">
+      <DependentUpon>ManagerCreateTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerApproval.aspx.cs">
+      <DependentUpon>ManagerApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\ManagerApproval.aspx.designer.cs">
+      <DependentUpon>ManagerApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\AdminAsign.aspx.cs">
+      <DependentUpon>AdminAsign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\AdminAsign.aspx.designer.cs">
+      <DependentUpon>AdminAsign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\ConsultCreateTS.aspx.cs">
+      <DependentUpon>ConsultCreateTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\ConsultCreateTS.aspx.designer.cs">
+      <DependentUpon>ConsultCreateTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\ConsultViewTS.aspx.cs">
+      <DependentUpon>ConsultViewTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\ConsultViewTS.aspx.designer.cs">
+      <DependentUpon>ConsultViewTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApTSController.cs" />
+    <Compile Include="Models\ATS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InterfaceFinish\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceFinish\Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceFinish\Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InterfaceFinish\AdminAsign.aspx" />
+    <Content Include="InterfaceFinish\ConsultCreateTS.aspx" />
+    <Content Include="InterfaceFinish\ConsultViewTS.aspx" />
+    <Content Include="InterfaceFinish\WebForm10.aspx" />
+    <Content Include="InterfaceFinish\WebForm11.aspx" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\.gitignore" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\GruntFile.js" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.css" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.js" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.min.js" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\bootstrap-datepicker.css" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\bootstrap-datepicker.js" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\glyphicons-halflings.png" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\screenshot.png" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\site.css" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\site.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\jquery.timepicker.css" />
+    <Content Include="Scripts\jquery.timepicker.js" />
+    <Content Include="Scripts\jquery.timepicker.min.js" />
+    <Content Include="InterfaceFinish\AddminAddMembers.aspx" />
+    <Content Include="InterfaceFinish\AddminAddProject.aspx" />
+    <Content Include="InterfaceFinish\AddminViewTS.aspx" />
+    <Content Include="InterfaceFinish\table.html" />
+    <Content Include="InterfaceFinish\ManagerViewTS.aspx" />
+    <Content Include="InterfaceFinish\ManagerCreateTS.aspx" />
+    <Content Include="InterfaceFinish\ManagerApproval.aspx" />
+    <Content Include="InterfaceVersion\assets02\css\ct-paper.css" />
+    <Content Include="InterfaceVersion\assets02\css\demo.css" />
+    <Content Include="InterfaceVersion\assets02\css\examples.css" />
+    <Content Include="InterfaceVersion\assets02\js\bootstrap-datepicker.js" />
+    <Content Include="InterfaceVersion\assets02\js\bootstrap-select.js" />
+    <Content Include="InterfaceVersion\assets02\js\ct-paper-checkbox.js" />
+    <Content Include="InterfaceVersion\assets02\js\ct-paper-radio.js" />
+    <Content Include="InterfaceVersion\assets02\js\ct-paper.js" />
+    <Content Include="InterfaceVersion\assets02\js\jquery-1.10.2.js" />
+    <Content Include="InterfaceVersion\assets02\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="InterfaceVersion\assets02\paper_img\banks.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\bg_wall.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\built_on_glass.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\cat.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\chet_faker_1.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\chet_faker_2.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\city.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\examples\landing.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\examples\profile.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\examples\register.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\favicon.ico" />
+    <Content Include="InterfaceVersion\assets02\paper_img\flume.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\lamp.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\landscape.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\new_logo.png" />
+    <Content Include="InterfaceVersion\assets02\paper_img\pencils.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\placeholder.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\red.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\shoes.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\thinking_in_textures.png" />
+    <Content Include="InterfaceVersion\assets02\paper_img\types.jpg" />
+    <Content Include="InterfaceVersion\assets02\paper_img\wall-dark.jpg" />
+    <Content Include="InterfaceVersion\assets\css\bootstrap.min.css" />
+    <Content Include="InterfaceVersion\assets\css\demo.css" />
+    <Content Include="InterfaceVersion\assets\css\material-dashboard.css" />
+    <Content Include="InterfaceVersion\assets\img\apple-icon.png" />
+    <Content Include="InterfaceVersion\assets\img\cover.jpeg" />
+    <Content Include="InterfaceVersion\assets\img\faces\marc.jpg" />
+    <Content Include="InterfaceVersion\assets\img\favicon.png" />
+    <Content Include="InterfaceVersion\assets\img\mask.png" />
+    <Content Include="InterfaceVersion\assets\img\new_logo.png" />
+    <Content Include="InterfaceVersion\assets\img\sidebar-1.jpg" />
+    <Content Include="InterfaceVersion\assets\img\sidebar-2.jpg" />
+    <Content Include="InterfaceVersion\assets\img\sidebar-3.jpg" />
+    <Content Include="InterfaceVersion\assets\img\sidebar-4.jpg" />
+    <Content Include="InterfaceVersion\assets\img\tim_80x80.png" />
+    <Content Include="InterfaceVersion\assets\js\bootstrap-notify.js" />
+    <Content Include="InterfaceVersion\assets\js\bootstrap.min.js" />
+    <Content Include="InterfaceVersion\assets\js\chartist.min.js" />
+    <Content Include="InterfaceVersion\assets\js\demo.js" />
+    <Content Include="InterfaceVersion\assets\js\jquery-3.1.0.min.js" />
+    <Content Include="InterfaceVersion\assets\js\material-dashboard.js" />
+    <Content Include="InterfaceVersion\assets\js\material.min.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\LoginStylesheet.css" />
+    <Content Include="InterfaceVersion\bootstrap3\css\bootstrap-theme.css" />
+    <Content Include="InterfaceVersion\bootstrap3\css\bootstrap-theme.min.css" />
+    <Content Include="InterfaceVersion\bootstrap3\css\bootstrap.css" />
+    <Content Include="InterfaceVersion\bootstrap3\css\bootstrap.min.css" />
+    <Content Include="InterfaceVersion\bootstrap3\css\font-awesome.css" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\fontawesome-webfont.svg" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="InterfaceVersion\bootstrap3\js\bootstrap.js" />
+    <Content Include="InterfaceVersion\bootstrap3\js\bootstrap.min.js" />
+    <Content Include="InterfaceVersion\components.html" />
+    <Content Include="InterfaceVersion\examples\dashboard.html" />
+    <Content Include="InterfaceVersion\examples\icons.html" />
+    <Content Include="InterfaceVersion\examples\maps.html" />
+    <Content Include="InterfaceVersion\examples\notifications.html" />
+    <Content Include="InterfaceVersion\examples\table.html" />
+    <Content Include="InterfaceVersion\examples\template.html" />
+    <Content Include="InterfaceVersion\examples\typography.html" />
+    <Content Include="InterfaceVersion\examples\upgrade.html" />
+    <Content Include="InterfaceVersion\examples\user.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="InterfaceVersion\index.html" />
+    <Content Include="InterfaceVersion\template.html" />
+    <Content Include="InterfaceVersion\tutorial.html" />
+    <Content Include="Logotransparent.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InterfaceFinish\Index.aspx" />
+    <Content Include="InterfaceVersion\assets\sass\material-dashboard.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\mixins\_chartist.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\mixins\_transparency.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\mixins\_vendor-prefixes.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\plugins\_animate.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\plugins\_plugin-nouislider.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_alerts.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_buttons.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_cards.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_chartist.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_checkboxes.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_colors.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_dialogs.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_dropdown.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_footers.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_forms.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_inputs-size.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_inputs.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_misc.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_mixins.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_navbars.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_pills.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_popups.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_radios.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_responsive.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_ripples.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_shadows.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_sidebar-and-main-panel.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_tables.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_tabs.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_togglebutton.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_typography.scss" />
+    <Content Include="InterfaceVersion\assets\sass\md\_variables.scss" />
+    <Content Include="InterfaceVersion\assets02\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\css\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\fonts\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\demo\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\examples\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\gallery\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\page_areas\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\photo_swipe\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\presentation-page\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\presentation-page\examples\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\img\tables\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\js\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\js\presentation-page\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\sass\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\.DS_Store" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_buttons.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_inputs.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_labels.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_navbars.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_tabs.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_transparency.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_vendor-prefixes.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_alerts.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_buttons.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_carousel.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_checkbox-radio.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_collapse.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_datepicker.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_dropdown.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_images.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_inputs.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_labels.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_misc.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_mixins.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_modal.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_navbars.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_progress-bars.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_responsive.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_sections.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_sliders.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_tabs-navs-pagination.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_tooltips-and-popovers.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_typography.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_variables.scss" />
+    <Content Include="InterfaceVersion\assets02\sass\examples.scss" />
+    <Content Include="InterfaceVersion\assets02\video\.DS_Store" />
+    <Content Include="InterfaceVersion\bootstrap3\.DS_Store" />
+    <Content Include="InterfaceVersion\bootstrap3\css\.DS_Store" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\fontawesome-webfont.eot" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\fontawesome-webfont.woff" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\FontAwesome.otf" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\bower.json" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jt.timepicker.jquery.json" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\package.json" />
+    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\README.md" />
+    <Content Include="InterfaceFinish\Consult.Master" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lib\bootstrap-datepicker.css" />
+    <Content Include="Scripts\lib\bootstrap-datepicker.js" />
+    <Content Include="Scripts\lib\glyphicons-halflings.png" />
+    <Content Include="Scripts\lib\screenshot.png" />
+    <Content Include="Scripts\lib\site.css" />
+    <Content Include="Scripts\lib\site.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="strba_tarn_slovakia_mountains_lake_115833_3840x2160.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="InterfaceFinish\Admin.Master" />
+    <Content Include="InterfaceFinish\Manager.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img\" />
+    <Folder Include="NewFolder1\" />
+    <Folder Include="NewFolder2\" />
+    <Folder Include="Views\ApTS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10094</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10094/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
