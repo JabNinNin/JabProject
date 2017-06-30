@@ -50,7 +50,7 @@ namespace WebApplication1
                 {
                     Session["userid"] = reader["id"].ToString();
                     Session["type"] = "Addmin";
-                    Response.Redirect("AddminViewTS.aspx");
+                    Response.Redirect("AdminViewTS.aspx");
                 }
 
 

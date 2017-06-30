@@ -147,26 +147,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminAddMembers.aspx.cs">
-      <DependentUpon>AddminAddMembers.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminAddMembers.aspx.cs">
+      <DependentUpon>AdminAddMembers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminAddMembers.aspx.designer.cs">
-      <DependentUpon>AddminAddMembers.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminAddMembers.aspx.designer.cs">
+      <DependentUpon>AdminAddMembers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminAddProject.aspx.cs">
-      <DependentUpon>AddminAddProject.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminAddProject.aspx.cs">
+      <DependentUpon>AdminAddProject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminAddProject.aspx.designer.cs">
-      <DependentUpon>AddminAddProject.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminAddProject.aspx.designer.cs">
+      <DependentUpon>AdminAddProject.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminViewTS.aspx.cs">
-      <DependentUpon>AddminViewTS.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminViewTS.aspx.cs">
+      <DependentUpon>AdminViewTS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InterfaceFinish\AddminViewTS.aspx.designer.cs">
-      <DependentUpon>AddminViewTS.aspx</DependentUpon>
+    <Compile Include="InterfaceFinish\AdminViewTS.aspx.designer.cs">
+      <DependentUpon>AdminViewTS.aspx</DependentUpon>
     </Compile>
     <Compile Include="InterfaceFinish\Consult.Master.cs">
       <DependentUpon>Consult.Master</DependentUpon>
@@ -224,13 +224,6 @@
     <Compile Include="InterfaceFinish\WebForm10.aspx.designer.cs">
       <DependentUpon>WebForm10.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceFinish\WebForm11.aspx.cs">
-      <DependentUpon>WebForm11.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="InterfaceFinish\WebForm11.aspx.designer.cs">
-      <DependentUpon>WebForm11.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Models\ApTSController.cs" />
     <Compile Include="Models\ATS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -261,7 +254,6 @@
     <Content Include="InterfaceFinish\ConsultCreateTS.aspx" />
     <Content Include="InterfaceFinish\ConsultViewTS.aspx" />
     <Content Include="InterfaceFinish\WebForm10.aspx" />
-    <Content Include="InterfaceFinish\WebForm11.aspx" />
     <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\.gitignore" />
     <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\GruntFile.js" />
     <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.css" />
@@ -277,9 +269,9 @@
     <Content Include="Scripts\jquery.timepicker.css" />
     <Content Include="Scripts\jquery.timepicker.js" />
     <Content Include="Scripts\jquery.timepicker.min.js" />
-    <Content Include="InterfaceFinish\AddminAddMembers.aspx" />
-    <Content Include="InterfaceFinish\AddminAddProject.aspx" />
-    <Content Include="InterfaceFinish\AddminViewTS.aspx" />
+    <Content Include="InterfaceFinish\AdminAddMembers.aspx" />
+    <Content Include="InterfaceFinish\AdminAddProject.aspx" />
+    <Content Include="InterfaceFinish\AdminViewTS.aspx" />
     <Content Include="InterfaceFinish\table.html" />
     <Content Include="InterfaceFinish\ManagerViewTS.aspx" />
     <Content Include="InterfaceFinish\ManagerCreateTS.aspx" />

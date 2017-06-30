@@ -1,9 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InterfaceFinish/Admin.Master" AutoEventWireup="true" CodeBehind="AddminAddMembers.aspx.cs" Inherits="WebApplication1.InterfaceFinish.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InterfaceFinish/Admin.Master" AutoEventWireup="true" CodeBehind="AdminAddMembers.aspx.cs" Inherits="WebApplication1.InterfaceFinish.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <form runat="server">
+    
+    <form  runat="server">
+        
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group label-floating">
@@ -14,7 +15,7 @@
             <div class="col-md-4">
                 <div class="form-group label-floating">
                     <label class="control-label">Username</label>
-                    <input id="Username"  runat="server" type="text" class="form-control" />
+                    <input id="Username" runat="server" type="text" class="form-control" />
                 </div>
             </div>
             <div class="col-md-5">
@@ -74,17 +75,24 @@
 
 
         </div>
+        <div class="col-md-4">
+            <div class="form-group label-floating">
+                <label class="control-label">fileTest</label>
+                <input id="TestText" runat="server" type="text" class="form-control" />
+            </div>
+        </div>
 
-             
-                    <asp:FileUpload id="FileUploadControl" runat="server"  />
-      
-                      <asp:Label runat="server" id="StatusLabel" text="Upload status: " />
-                      
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Upload" />
+                <asp:FileUpload ID="FileUploadControl" runat="server"  />
+
+                <asp:Label runat="server" ID="StatusLabel" Text="Upload status: " />
+
+
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-        
-        <asp:Button ID="UpdateProfile" runat="server" Text="Update Profile" type="submit" CssClass="btn btn-primary pull-right" OnClick="UpdateProfile_Click"  />
-        
-        <div class="clearfix"></div>
+
+        <asp:Button ID="UpdateProfile" runat="server" Text="Update Profile" type="submit" CssClass="btn btn-primary pull-right" OnClick="UpdateProfile_Click" />
+
+
     </form>
     
 </asp:Content>
