@@ -130,3 +130,4 @@ C:\Users\Mahatthana\Desktop\JabProject\JISProjectLastVersion\WebApplication1\bin
 C:\Users\Mahatthana\Desktop\JabProject\JISProjectLastVersion\WebApplication1\bin\Microsoft.AI.Web.xml
 C:\Users\Mahatthana\Desktop\JabProject\JISProjectLastVersion\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Mahatthana\Desktop\JabProject\JISProjectLastVersion\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Mahatthana\Desktop\JabProject\JISProjectLastVersion\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache

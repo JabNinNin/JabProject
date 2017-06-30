@@ -95,7 +95,7 @@ namespace WebApplication1.InterfaceFinish
 
 
             string queryString =
-            "Insert into userprofile (workerid,firstname,lastname,telnumber,email,username,password,position ,photo) values ('" + Employee_id.Value + "','" + FirstName.Value + "','" + LastName.Value + "','" + TelephoneNumber.Value + "','" + EmailAddress.Value + "','" + Username.Value + "','" + Password.Value + "','" + positiondroupdown.SelectedIndex.ToString() + "','" + Jname + "' )";
+            "Insert into userprofile (workerid,firstname,lastname,telnumber,email,username,password,position ,photo) values ('" + (Employee_id.Value )+ "','" + FirstName.Value + "','" + LastName.Value + "','" + TelephoneNumber.Value + "','" + EmailAddress.Value + "','" + Username.Value + "','" + Password.Value + "','" + positiondroupdown.SelectedIndex.ToString() + "','" + Jname + "')";
 
             con.Open();
 
@@ -109,59 +109,7 @@ namespace WebApplication1.InterfaceFinish
 
         }
 
-        protected void Upload(object sender, EventArgs e)
-        {
-
-            SqlConnection con = new SqlConnection(constr);
-
-            if (FileUploadControl.HasFile)
-            {
-                string gg = "alert('test');";
-
-                //string fileName = Path.GetFileName(FileUploadControl.PostedFile.FileName);
-                //try
-                //{
-
-                //    if (FileUploadControl.PostedFile.ContentType == "image/gif" || FileUploadControl.PostedFile.ContentType == "image/jpeg" ||
-                //        FileUploadControl.PostedFile.ContentType == "image/png")
-                //    {
-                //        if (FileUploadControl.PostedFile.ContentLength > 0)
-                //        {
-                //            string filename = Path.GetFileName(FileUploadControl.FileName);
-
-                //            Jname = Path.GetRandomFileName() + filename;
-
-                //            string queryString2 = "select photo from userprofile ";
-
-                //            SqlCommand cmd2 = new SqlCommand(queryString2, con);
-                //            con.Open();
-                //            SqlDataReader reader = cmd2.ExecuteReader();
-                //            while (reader.Read())
-                //            {
-                //                Kname = Convert.ToString(reader["photo"]);
-                //            }
-                //            con.Close();
-                //            while (Jname == Kname) { Jname = Path.GetRandomFileName() + Jname; }
-
-                //            FileUploadControl.SaveAs(Server.MapPath("/img/") + Jname);
-
-                //            StatusLabel.Text = ("Upload status: File uploaded!");
-                //        }
-                //        else
-                //            StatusLabel.Text = "Upload status: The file has to be less than 100 kb!";
-                //    }
-                //    else
-                //        StatusLabel.Text = "Upload status: Only JPEG files are accepted!";
-
-                //}
-                //catch (Exception ex)
-                //{
-                //    StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
-                //}
-                //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + Jname + "');", true);
-
-            }
-        }
+        
 
     }
 

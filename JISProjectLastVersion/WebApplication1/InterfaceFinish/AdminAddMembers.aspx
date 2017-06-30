@@ -60,7 +60,7 @@
             <div class="col-md-6">
                 <div class="form-group label-floating">
                     <select id="positiondroupdown" class="form-control " runat="server">
-                        <option value="0" selected>All Position </option>
+                        <option value="All Position">All Position </option>
                         <option value="Managing Director">Managing Director</option>
                         <option value="Delivery Service Manager">Delivery Service Manager</option>
                         <option value="Technical Consultan">Technical Consultant</option>
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Upload" />
+                
                 <asp:FileUpload ID="FileUploadControl" runat="server"  />
 
                 <asp:Label runat="server" ID="StatusLabel" Text="Upload status: " />
