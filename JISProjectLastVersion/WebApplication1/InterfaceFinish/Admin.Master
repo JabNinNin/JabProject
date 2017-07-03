@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="WebApplication1.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="false"  CodeBehind="Admin.Master.cs" Inherits="WebApplication1.Site1" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -157,7 +157,7 @@
 	        <div class="content">
 	            <div class="container-fluid">
 	                <div class="row">
-	                    <div class="col-md-10">
+	                    <div class="col-md-12">
 	                        <div class="card">
 	                            <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">ADD Profile</h4>

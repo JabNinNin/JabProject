@@ -26,10 +26,13 @@ namespace WebApplication1.Models
         public int isSpprove { get; set; }
     }
     public class Modelproject
-    {   public string ProjectName { get; set; }
+    {
+        public int id { get; set; }
+        public string ProjectName { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
         public string Description { get; set; }
+        public string Information { get; set; }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InterfaceFinish/Admin.Master" AutoEventWireup="true" CodeBehind="AddminAddProject.aspx.cs" Inherits="WebApplication1.InterfaceFinish.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InterfaceFinish/Admin.Master" AutoEventWireup="true"  CodeBehind="AdminAddProject.aspx.cs" Inherits="WebApplication1.InterfaceFinish.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     
 </asp:Content>
@@ -77,12 +77,33 @@
             </script>
 												</div>
 	                                        </div>
-	                                         <div class="col-md-5">
+	                                        <div class="col-md-3">
 	                                            <div class="form-group">
-	                                                <label>About Me</label>
-													<div class="form-group label-floating">
-									    				<label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-								    					<textarea id="description" runat="server"  class="form-control" rows="3"></textarea>
+	                                                <div class="form-group label-floating">
+									    				 <asp:DropDownList ID="DropDownList1" runat="server"  AutoPostBack="True" CssClass="form-control "  OnSelectedIndexChanged="Setinform">
+                                                            <asp:ListItem Text="Daily">Daily</asp:ListItem>
+                                                            <asp:ListItem Text="Weekly">Weekly</asp:ListItem>
+                                                            <asp:ListItem Text="Mountly">Mountly</asp:ListItem>
+                                                            <asp:ListItem Text="Manual" >Manual</asp:ListItem>
+                                                        </asp:DropDownList>
+                                                        
+		                        					</div>
+	                                            </div>
+	                                        </div>
+                                            <div class="col-md-2">
+	                                            <div class="form-group">
+	                                                <div class="form-group label-floating">
+									    				 <asp:TextBox ID="Countday" runat="server" CssClass="form-control"></asp:TextBox>
+		                        					</div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                     <div class="row">	                                    	                                        
+	                                         <div class="col-md-12">
+	                                            <div class="form-group">
+	                                                <div class="form-group label-floating">
+									    				<label class="control-label">You must complete description of this project</label>
+								    					<textarea id="Textarea1" runat="server"  class="form-control" rows="3"></textarea>
 		                        					</div>
 	                                            </div>
 	                                        </div>
@@ -110,9 +131,10 @@
                         <th >StartDate</th>
                         <th >EndDate</th>
                         <th>Description</th>
+                        <th>Infomation</th>
                         
                             </thead>
-                   <asp:Repeater runat="server" ID="TSConList" ClientIDMode="Static" >
+                   <asp:Repeater runat="server" ID="TSConList" ClientIDMode="Static"  OnItemCommand="rptLogList_ItemCommand"  >
                         <ItemTemplate>
                     <tbody>
                        <tr>
@@ -121,16 +143,22 @@
                            <td><%#Eval("StartDate ") %></td>
                            <td><%#Eval("EndDate ") %></td>
                            <td ><%#Eval("Description") %></td>
-                          </tr>
+                           <td >Every <%#Eval("Information") %> Day </td>
+                           <td><asp:Button class="btn btn-warning pull-right" runat="server" ID="btnReview" CommandArgument='<%#Eval("id") %>' Text="Edit" commandname="EditCommand" />
+                                   </td>
+                           <td><asp:Button class="btn btn-danger pull-right" runat="server"  ID="btnAssign" CommandArgument='<%#Eval("id") %>' Text="Delete" commandname="DeleteComand"/>
+                          </td>
+                               </tr>
               
                         </tbody></ItemTemplate>
 					
                     </asp:Repeater>
+                                                
 
                 </table>
 	                                    </div>
 
-	                                  
+	                                  <asp:Button class="btn btn-primary pull-right" runat="server"  ID="btnwqwqe" OnClick="btnwqwqe_Click" />
 
 	                                    <div class="clearfix"></div>
 	                                

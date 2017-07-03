@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.Master.cs" Inherits="WebApplication1.Site2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" enableEventvalidation="false" validateRequest="false" CodeBehind="Manager.Master.cs" Inherits="WebApplication1.Site2" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

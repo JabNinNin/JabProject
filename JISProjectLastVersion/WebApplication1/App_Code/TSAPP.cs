@@ -95,5 +95,42 @@ namespace WebApplication1.App_code
             con.Close();
             return ListAPP;
         }
+
+        public static Modelproject Editproject(string id)
+        {      //เมื่อตอนกด EDIT จะ get เข้า textbox
+            Modelproject user = new Modelproject();
+            string queryString = "select * from project where id=@id";
+            con.Open();
+            SqlCommand command = new SqlCommand(queryString, con);
+            command.Parameters.AddWithValue("@id",id);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                
+                user.ProjectName = (string)reader["projectname"];
+                user.StartDate = Convert.ToString( reader["start_date"]);
+                user.EndDate = Convert.ToString(reader["end_date"]);
+                user.Description = (string)reader["desciption"];
+                user.Information = (string)reader["Information"];
+            }
+            con.Close();
+            return user;
+        }
+        public static void editUser(Modelproject user)
+        {   
+            string queryString =
+         "update project set projectname=@ProjectName ,start_date=@StartDate,end_date=@EndDate,desciption=@Description,Information=@Information where id=@id ";
+            con.Open();
+            SqlCommand command = new SqlCommand(queryString, con);
+            command.Parameters.AddWithValue("@id", user.id);
+            command.Parameters.AddWithValue("@ProjectName", user.ProjectName);
+            command.Parameters.AddWithValue("@StartDate", user.StartDate);
+            command.Parameters.AddWithValue("@EndDate", user.EndDate);
+            command.Parameters.AddWithValue("@Description", user.Description);
+            command.Parameters.AddWithValue("@Information", user.Information);
+            command.ExecuteNonQuery();
+            con.Close();
+        }
+
     }
 }
