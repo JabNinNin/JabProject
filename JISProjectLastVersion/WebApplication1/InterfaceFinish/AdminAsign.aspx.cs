@@ -11,10 +11,10 @@ namespace WebApplication1.InterfaceFinish
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["type"] == null)
-            {
-                Response.Redirect("Index.aspx");
-            }
+            //if (Session["type"] == null)
+            //{
+            //    Response.Redirect("Index.aspx");
+            //}
         }
     }
 }

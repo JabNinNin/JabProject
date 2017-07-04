@@ -4,7 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
-       
+         <div class="card-header" data-background-color="purple">
+	                                <h4 class="title">ADD Profile</h4>
+									<p class="category">Complete your Employee profile</p>
+	                            </div>
+        <div class="card-content">
         <div class="row">
 	                    <div class="col-md-12">
 	                        <div class="card">
@@ -123,18 +127,41 @@
 	                            </div>
 	                            <div class="card-content">
 	                                
-	                                    <div class="row"><select id="uu">
+	                                    <div class="row">
+                                           
+                                            <div class="col-md-3">
+												<div class="form-group label-floating">
+													<select id="uu" class="form-control ">
                                                   <option value="0">Projectname</option>
                                                   <option value="1">StartDate</option>
                                                   <option value="2">EndDate</option>
                                                   <option value="3">Desciption</option>
                                                   <option value="4">Information</option>
-                                            </select><input type="text" id="myInput" onkeyup="myFunction(uu.value)" placeholder="Search for names.." title="Type in a name" onkeydown = "return (event.keyCode!=13);" />
-	                                        <table id="Loop" style="width: 100%" class="table">
-
+                                            </select>
+												</div>
+	                                        </div>
+                                            <div class="col-md-2">
+												<div class="form-group label-floating">													
+												 <div class="demo form-group label-floating ">
+                                                     <input type="text" id="myInput" onkeyup="myFunction(uu.value)" placeholder="Search for names.." title="Type in a name" onkeydown = "return (event.keyCode!=13);" class="form-control " />
+                                                 </div>
+												</div>
+	                                        </div>
+                                             <div class="col-md-2">
+												<div class="form-group label-floating">													
+												 <div class="demo form-group label-floating ">
+                                                     <button type="button" class="btn btn-success btn-sm " onclick="sortTable(uu.value)" ><i class="material-icons">pageview</i>Sort</button>
+                                                 </div>
+												</div>
+	                                        </div>
+	                                    </div>
+                                        <div class="row " style="min-height:500px">
+                                            
+                                            <table id="Loop" style="width: 100%" class="table">
+                                                
                   
                         <thead class="text-primary">                                            
-                        <tr ><th>Project </th>                                        
+                        <tr  ><th >Project </th>                                        
                         <th >StartDate</th>
                         <th >EndDate</th>
                         <th>Description</th>
@@ -150,7 +177,7 @@
                            <td><%#Eval("StartDate ") %></td>
                            <td><%#Eval("EndDate ") %></td>
                            <td ><%#Eval("Description") %></td>
-                           <td >Every <%#Eval("Information") %> Day </td>
+                           <td >Every <%#Eval("Information") %>  </td>
                            <td><asp:Button class="btn btn-warning pull-right" runat="server" ID="btnReview" CommandArgument='<%#Eval("id") %>' Text="Edit" commandname="EditCommand" />
                                    </td>
                            <td><asp:Button class="btn btn-danger pull-right" runat="server"  ID="btnAssign" CommandArgument='<%#Eval("id") %>' Text="Delete" commandname="DeleteComand"/>
@@ -166,27 +193,9 @@
 	                                  
                                     
 	                                    <div class="clearfix"></div>
-                                    <asp:textbox id="jio" runat="server"></asp:textbox>
+                                    <asp:textbox id="jio" runat="server"  Visible="false"></asp:textbox></div>
                                     
-                                    <script>
-                                        function myFunction(columsert) {
-                                            var input, filter, table, tr, td, i;
-                                            input = document.getElementById("myInput");
-                                            filter = input.value.toUpperCase();
-                                            table = document.getElementById("Loop");
-                                            tr = table.getElementsByTagName("tr");
-                                            for (i = 0; i < tr.length; i++) {
-                                                td = tr[i].getElementsByTagName("td")[columsert];
-                                                if (td) {
-                                                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                                        tr[i].style.display = "";
-                                                    } else {
-                                                        tr[i].style.display = "none";
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    </script>
+                                    
                                    
 	                            </div>                            
 	                        </div>
@@ -196,7 +205,7 @@
              
                  
        
-        
+         
         
     </form>
 </asp:Content>
