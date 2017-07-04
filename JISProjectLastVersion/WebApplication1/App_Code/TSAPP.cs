@@ -5,6 +5,7 @@ using System.Web;
 using WebApplication1.Models;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Windows;
 
 namespace WebApplication1.App_code
 {
@@ -106,10 +107,10 @@ namespace WebApplication1.App_code
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                
+                user.id = (int)reader["id"];
                 user.ProjectName = (string)reader["projectname"];
-                user.StartDate = Convert.ToString( reader["start_date"]);
-                user.EndDate = Convert.ToString(reader["end_date"]);
+                user.StartDate = Convert.ToString(((DateTime)reader["start_date"]).ToString(" dd/MM/yyyy "));
+                user.EndDate = Convert.ToString(((DateTime)reader["end_date"]).ToString(" dd/MM/yyyy "));
                 user.Description = (string)reader["desciption"];
                 user.Information = (string)reader["Information"];
             }
@@ -124,12 +125,15 @@ namespace WebApplication1.App_code
             SqlCommand command = new SqlCommand(queryString, con);
             command.Parameters.AddWithValue("@id", user.id);
             command.Parameters.AddWithValue("@ProjectName", user.ProjectName);
-            command.Parameters.AddWithValue("@StartDate", user.StartDate);
-            command.Parameters.AddWithValue("@EndDate", user.EndDate);
+            command.Parameters.AddWithValue("@StartDate",Convert.ToDateTime(  user.StartDate));
+            command.Parameters.AddWithValue("@EndDate", Convert.ToDateTime(user.EndDate));
             command.Parameters.AddWithValue("@Description", user.Description);
             command.Parameters.AddWithValue("@Information", user.Information);
             command.ExecuteNonQuery();
             con.Close();
+            
+            
+            
         }
 
     }

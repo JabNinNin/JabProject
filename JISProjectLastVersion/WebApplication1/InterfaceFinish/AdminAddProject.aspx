@@ -18,7 +18,7 @@
 	                                        <div class="col-md-3">
 												<div class="form-group label-floating">
 													<label class="control-label">ProjectName</label>
-													<input id="Projectname" runat="server" type="text" class="form-control" />
+													<input id="Projectname" runat="server" type="text" class="form-control" onkeydown = "return (event.keyCode!=13);" />
 												</div>
 	                                        </div>
                                             <div class="col-md-2">
@@ -57,7 +57,7 @@
 
                 <p id="datepairExample1">
                     <label class="control-label">End Project</label>
-                    <input id="enddate" runat="server" type="text" class="date end form-control control-label " placeholder="Date"/>
+                    <input id="enddate" runat="server" type="text" class="date end form-control control-label " placeholder="Date" />
                 </p>
             </div>
 
@@ -110,8 +110,8 @@
 	                                    </div>
 	                                    
 	                                    
-<asp:Button ID="Button1" runat="server" Text="commit " class="btn btn-primary pull-right" OnClick="InsertProject" />
-	                                   
+                                       <asp:Button ID="Button1" runat="server" Text="commit " class="btn btn-primary pull-right" OnClick="InsertProject" />
+	                                   <asp:Button class="btn btn-primary pull-right" runat="server"  ID="btnwqwqe" OnClick="btnwqwqe_Click" Text="Save Change" />
 	                                    <div class="clearfix"></div>
 	                                
 	                            </div>                            
@@ -123,15 +123,22 @@
 	                            </div>
 	                            <div class="card-content">
 	                                
-	                                    <div class="row">
-	                                        <table style="width: 100%" class="table">
+	                                    <div class="row"><select id="uu">
+                                                  <option value="0">Projectname</option>
+                                                  <option value="1">StartDate</option>
+                                                  <option value="2">EndDate</option>
+                                                  <option value="3">Desciption</option>
+                                                  <option value="4">Information</option>
+                                            </select><input type="text" id="myInput" onkeyup="myFunction(uu.value)" placeholder="Search for names.." title="Type in a name" onkeydown = "return (event.keyCode!=13);" />
+	                                        <table id="Loop" style="width: 100%" class="table">
+
                   
                         <thead class="text-primary">                                            
-                        <th >Project</th>                                          
+                        <tr ><th>Project </th>                                        
                         <th >StartDate</th>
                         <th >EndDate</th>
                         <th>Description</th>
-                        <th>Infomation</th>
+                        <th>Infomation</th></tr> 
                         
                             </thead>
                    <asp:Repeater runat="server" ID="TSConList" ClientIDMode="Static"  OnItemCommand="rptLogList_ItemCommand"  >
@@ -153,15 +160,34 @@
                         </tbody></ItemTemplate>
 					
                     </asp:Repeater>
-                                                
-
-                </table>
+                 </table>
 	                                    </div>
 
-	                                  <asp:Button class="btn btn-primary pull-right" runat="server"  ID="btnwqwqe" OnClick="btnwqwqe_Click" />
-
+	                                  
+                                    
 	                                    <div class="clearfix"></div>
-	                                
+                                    <asp:textbox id="jio" runat="server"></asp:textbox>
+                                    
+                                    <script>
+                                        function myFunction(columsert) {
+                                            var input, filter, table, tr, td, i;
+                                            input = document.getElementById("myInput");
+                                            filter = input.value.toUpperCase();
+                                            table = document.getElementById("Loop");
+                                            tr = table.getElementsByTagName("tr");
+                                            for (i = 0; i < tr.length; i++) {
+                                                td = tr[i].getElementsByTagName("td")[columsert];
+                                                if (td) {
+                                                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                                        tr[i].style.display = "";
+                                                    } else {
+                                                        tr[i].style.display = "none";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </script>
+                                   
 	                            </div>                            
 	                        </div>
 	                    </div>

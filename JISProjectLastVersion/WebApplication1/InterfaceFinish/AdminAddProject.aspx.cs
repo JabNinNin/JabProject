@@ -9,15 +9,16 @@ using System.Data.SqlClient;
 using System.IO;
 using WebApplication1.Models;
 using WebApplication1.App_code;
+using System.Web.Mvc;
 
 
 namespace WebApplication1.InterfaceFinish
 {
     public partial class WebForm1 : System.Web.UI.Page
-    {
+    {   
         string constr = WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         public static SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString);
-
+        Modelproject user = new Modelproject();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,13 +26,16 @@ namespace WebApplication1.InterfaceFinish
             //{
             //    Response.Redirect("Index.aspx");
             //}
+           
             if (!Page.IsPostBack) {
                 ReloadData(); }
+            
         }
         protected void ReloadData()
         {  //ดึงรายชื่อ Timesheets
             TSConList.DataSource = getTSCon();
             TSConList.DataBind();
+            
         }
         protected void InsertProject(object sender, EventArgs e)
         {
@@ -109,15 +113,16 @@ namespace WebApplication1.InterfaceFinish
                 if (e.CommandName.ToString() == ("EditCommand"))
                 {
                 string UserId = e.CommandArgument.ToString();
+               
                 Modelproject user = TSAPP.Editproject(UserId);
-
+                
                 Projectname.Value = user.ProjectName;
                 startdate.Value = user.StartDate;
                 enddate.Value = user.EndDate;
                 Countday.Text = user.Information;
                 Textarea1.Value = user.Description;
 
-
+                jio.Text= Convert.ToString( user.id);
 
             }
 
@@ -137,16 +142,16 @@ namespace WebApplication1.InterfaceFinish
             }
           
         }
-
         protected void btnwqwqe_Click(object sender, EventArgs e)
         {
-            
-            Modelproject user = new Modelproject();
-            user.ProjectName = Convert.ToString(Projectname.Value);
-            user.StartDate = Convert.ToString( startdate.Value);
-            user.EndDate = Convert.ToString((string)enddate.Value);
-            user.Information = Convert.ToString(Countday.Text);
-            user.Description = Convert.ToString(Textarea1.Value);
+
+            //Modelproject user = new Modelproject();
+            user.id = Convert.ToInt32(jio.Text);
+            user.ProjectName = Projectname.Value;
+            user.StartDate =   startdate.Value;
+            user.EndDate = enddate.Value;
+            user.Information = Countday.Text;
+            user.Description = Textarea1.Value;
             //Projectname.Value = user.ProjectName;
             //startdate.Value = user.StartDate;
             //enddate.Value = user.EndDate;
@@ -155,7 +160,14 @@ namespace WebApplication1.InterfaceFinish
 
 
             TSAPP.editUser(user);
+
+
+
+
+
             ReloadData();
         }
+        
+
     }
 }

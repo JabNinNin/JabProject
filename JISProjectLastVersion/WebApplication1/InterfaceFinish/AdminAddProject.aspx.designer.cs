@@ -76,6 +76,15 @@ namespace WebApplication1.InterfaceFinish {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
+        /// btnwqwqe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnwqwqe;
+        
+        /// <summary>
         /// TSConList control.
         /// </summary>
         /// <remarks>
@@ -85,12 +94,12 @@ namespace WebApplication1.InterfaceFinish {
         protected global::System.Web.UI.WebControls.Repeater TSConList;
         
         /// <summary>
-        /// btnwqwqe control.
+        /// jio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnwqwqe;
+        protected global::System.Web.UI.WebControls.TextBox jio;
     }
 }

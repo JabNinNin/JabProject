@@ -31,6 +31,8 @@ namespace WebApplication1.Models
         public string ProjectName { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public string StartDate_sw { get; set; }
+        public string EndDate_sw { get; set; }
         public string Description { get; set; }
         public string Information { get; set; }
 
