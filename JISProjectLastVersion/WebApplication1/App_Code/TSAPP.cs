@@ -117,7 +117,7 @@ namespace WebApplication1.App_code
             con.Close();
             return user;
         }
-        public static void editUser(Modelproject user)
+        public static void editUserPJ(Modelproject user)
         {   
             string queryString =
          "update project set projectname=@ProjectName ,start_date=@StartDate,end_date=@EndDate,desciption=@Description,Information=@Information where id=@id ";

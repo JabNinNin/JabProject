@@ -49,8 +49,7 @@ namespace WebApplication1.InterfaceFinish
             SqlCommand cmd = new SqlCommand(queryString, con);
 
             cmd.ExecuteNonQuery();
-            string display2 = "เพิ่มโปรเจคเรียบร้อย";
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", " + display2 + ");
+            
 
             con.Close();
             ReloadData();
@@ -159,7 +158,7 @@ namespace WebApplication1.InterfaceFinish
             //Textarea1.Value = user.Description;
 
 
-            TSAPP.editUser(user);
+            TSAPP.editUserPJ(user);
 
 
 

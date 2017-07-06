@@ -37,4 +37,30 @@ namespace WebApplication1.Models
         public string Information { get; set; }
 
     }
+    public class ModelAssign
+    {
+        public int id  { get; set; }
+        public string ProjectName_sw { get; set; }
+        public string Employee_sw { get; set; }
+        public string Description_sw { get; set; }        
+    
+       
+        public int ProjectNameInsert { get; set; }
+        public int EmployeeInsert { get; set; }
+        public string DescriptionInsert { get; set; }
+    }
+    public class ModelViewTS {
+       
+        public int id { get; set; }
+        public string Projectname { get; set; }
+        public string FristnameLastname { get; set; }
+        public string DateTS { get; set; }
+        public string Worktime { get; set; }
+        public string Description { get; set; }
+        public DateTime Checkstatus { get; set; }
+        public string status { get; set; }
+        public string[] UpdatestatusID { get; set; }
+        public int isSpprove { get; set; }
+    }
+
 }
