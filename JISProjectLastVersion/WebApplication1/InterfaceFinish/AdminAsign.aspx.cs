@@ -19,11 +19,11 @@ namespace WebApplication1.InterfaceFinish
         public static SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["type"] == null)
-            //{
-            //    Response.Redirect("Index.aspx");
-            //}
-           
+            if (Session["type"]==null ||Session["type"].ToString() != "Admin" )
+            {
+                Response.Redirect("Index.aspx");
+            }
+
             if (!Page.IsPostBack)
             {
                 ReloadData();

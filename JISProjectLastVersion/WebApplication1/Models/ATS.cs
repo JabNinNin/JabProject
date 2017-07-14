@@ -35,7 +35,8 @@ namespace WebApplication1.Models
         public string EndDate_sw { get; set; }
         public string Description { get; set; }
         public string Information { get; set; }
-
+        public DateTime startD { get; set; }
+        public DateTime endD { get; set; }
     }
     public class ModelAssign
     {
@@ -50,17 +51,17 @@ namespace WebApplication1.Models
         public string DescriptionInsert { get; set; }
     }
     public class ModelViewTS {
-       
+
         public int id { get; set; }
         public string Projectname { get; set; }
         public string FristnameLastname { get; set; }
         public string DateTS { get; set; }
         public string Worktime { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public string Description { get; set; }
-        public DateTime Checkstatus { get; set; }
         public string status { get; set; }
-        public string[] UpdatestatusID { get; set; }
-        public int isSpprove { get; set; }
+       
     }
 
 }

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+   
          <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">Assign</h4>
 									<p class="category">Assign or view all assigned</p>
@@ -136,5 +136,5 @@
        
          
         
-    </form>
+    
 </asp:Content>

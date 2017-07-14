@@ -3,7 +3,7 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+    
          <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">ADD Profile</h4>
 									<p class="category">Complete your Employee profile</p>
@@ -15,6 +15,8 @@
 	                            <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">Add Project</h4>
 									<p class="category">Add new project for asign work and feture</p>
+                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                     <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> 
 	                            </div>
 	                            <div class="card-content">
 	                                
@@ -93,6 +95,7 @@
                                                         
 		                        					</div>
 	                                            </div>
+                                                
 	                                        </div>
                                             <div class="col-md-2">
 	                                            <div class="form-group">
@@ -194,8 +197,7 @@
                                     
 	                                    <div class="clearfix"></div>
                                     <asp:textbox id="jio" runat="server"  Visible="false"></asp:textbox></div>
-                                    
-                                    
+                                    <asp:textbox id="IOP" runat="server"  Visible="false"></asp:textbox></div>
                                    
 	                            </div>                            
 	                        </div>
@@ -207,5 +209,5 @@
        
          
         
-    </form>
+    
 </asp:Content>

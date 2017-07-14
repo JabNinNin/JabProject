@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <form runat="server">
+      
          <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">Assign</h4>
 									<p class="category">Assign or view all assigned</p>
@@ -26,9 +26,11 @@
                                                   <option value="0">Projectname</option>
                                                   <option value="1">EmployeeName</option>
                                                   <option value="2">Date</option>   
-                                                  <option value="3">WorkTime</option>             
-                                                  <option value="4">Status</option>             
-                                                  <option value="5">Description</option>             
+                                                  <option value="3">WorkTime</option>  
+                                                  <option value="4">StartTime</option> 
+                                                  <option value="5">EndTime</option> 
+                                                  <option value="6">Status</option>             
+                                                  <option value="7">Description</option>             
                         
                                             </select>
 												</div>
@@ -49,15 +51,19 @@
 	                                        </div>
 	                                    </div>
                                         <div class="row " style="min-height:500px">
-                                            
+                                            <div class="col-lg-12">
                                             <table id="Loop" style="width: 100%" class="table">
                                                 
                   
                         <thead class="text-primary">                                            
-                        <tr ><th >Projectname</th>                                        
+                        <tr>
+                        <th >ID</th>        
+                        <th >Projectname</th>                                        
                         <th >EmployeeName</th>     
                         <th >Date</th>     
-                        <th >WorkTime </th>     
+                        <th >WorkTime </th>
+                        <th >StartTime</th>        
+                        <th >EndTime</th>        
                         <th >Description</th>     
                         </tr> 
                             </thead>
@@ -66,9 +72,15 @@
                     <tbody>
                        <tr>
                          
-	                      <td><%#Eval("ProjectName_sw") %></td>
-                           <td><%#Eval("Employee_sw") %></td>
-                           <td ><%#Eval("Description_sw") %></td>
+	                      <td><%#Eval("id") %></td>
+                           <td><%#Eval("Projectname") %></td>
+                           <td ><%#Eval("FristnameLastname") %></td>
+                            <td ><%#Eval("DateTS") %></td>
+                            <td ><%#Eval("Worktime ") %></td>
+                            <td ><%#Eval("StartTime") %></td>
+                           <td ><%#Eval("EndTime") %></td>
+                           <td ><%#Eval("Description") %></td>
+                           <td ><%#Eval("status") %></td>
                            <td><asp:Button class="btn btn-warning pull-right" runat="server" ID="btnReview" CommandArgument='<%#Eval("id") %>' Text="Edit" commandname="EditCommand" />
                                    </td>
                            <td><asp:Button class="btn btn-danger pull-right" runat="server"  ID="btnAssign" CommandArgument='<%#Eval("id") %>' Text="Delete" commandname="DeleteComand"/>
@@ -79,6 +91,7 @@
 					
                     </asp:Repeater>
                  </table>
+                                                </div>
 	                                    </div>
 
 	                                  
@@ -100,5 +113,5 @@
        
          
         
-    </form>
+    
 </asp:Content>

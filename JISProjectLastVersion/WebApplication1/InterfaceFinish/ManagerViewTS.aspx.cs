@@ -44,7 +44,7 @@ namespace WebApplication1.InterfaceFinish
             ModelTS ListinTS;
 
             //ดึง list log
-            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].description  
+            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].desciption  
  FROM [timesheets] Inner Join [project] ON [project].[id] =  [timesheets].[project_id]Inner Join [userprofile] ON [userprofile].[id] =  [timesheets].[employee_id]where [timesheets].[status]='pending'and [timesheets].[employee_id]='" +SSS + "'";
             con.Open(); /*+เดี่ยวกลับมาแก้ใส่session +*/
             SqlCommand command = new SqlCommand(queryString, con);
@@ -58,7 +58,7 @@ namespace WebApplication1.InterfaceFinish
                 ListinTS.FristnameLastname = (string)reader["Name"];
                 ListinTS.Worktime = Convert.ToString(reader["WorkHours"]);
                 ListinTS.DateTS = Convert.ToString(((DateTime)reader["DateWork"]).ToString("d"));
-                ListinTS.Description = Convert.ToString(reader["Description"]);
+                ListinTS.Description = Convert.ToString(reader["Desciption"]);
                 ListinTS.Checkstatus = (DateTime)reader["Enddate"];
                 
                     ListinTS.status = Convert.ToString(reader["status"]); ;
@@ -85,7 +85,7 @@ namespace WebApplication1.InterfaceFinish
             ModelTS ListinTS;
 
             //ดึง list log
-            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].description  
+            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].desciption  
  FROM [timesheets] Inner Join [project] ON [project].[id] =  [timesheets].[project_id]Inner Join [userprofile] ON [userprofile].[id] =  [timesheets].[employee_id]where [timesheets].[status]='pending'and [timesheets].[employee_id]='" + SSS + "'";
             con.Open(); /*+เดี่ยวกลับมาแก้ใส่session +*/
             SqlCommand command = new SqlCommand(queryString, con);
@@ -99,7 +99,7 @@ namespace WebApplication1.InterfaceFinish
                 ListinTS.FristnameLastname = (string)reader["Name"];
                 ListinTS.Worktime = Convert.ToString(reader["WorkHours"]);
                 ListinTS.DateTS = Convert.ToString(((DateTime)reader["DateWork"]).ToString("d"));
-                ListinTS.Description = Convert.ToString(reader["Description"]);
+                ListinTS.Description = Convert.ToString(reader["Desciption"]);
                 ListinTS.Checkstatus = (DateTime)reader["Enddate"];
 
                 ListinTS.status = Convert.ToString(reader["status"]); ;

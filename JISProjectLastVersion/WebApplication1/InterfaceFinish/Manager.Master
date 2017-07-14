@@ -104,6 +104,7 @@
 								<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
 	 							   <i class="material-icons">person</i>
 	 							   <p class="hidden-lg hidden-md">Profile</p>
+                                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 	 						   </a>
 							</li>
 						</ul>
@@ -126,7 +127,7 @@
 	                <div class="row">
 	                    <div class="col-md-12">
 	                       
-	                                <form>
+	                               
 	                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
 
@@ -135,7 +136,7 @@
 
 	                                    </asp:ContentPlaceHolder>
 	                                  
-	                                </form>
+	                                
 	                            </div>
 	                    
 						
@@ -161,7 +162,61 @@
 	        </footer>
 	    </div>
 	</div>
-
+    <script>
+        function myFunction(columsert) {
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("Loop");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[columsert];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+                                    </script>
+    <script>
+        function sortTable(Columsort) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("Loop");
+            switching = true;
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[Columsort];
+                    y = rows[i + 1].getElementsByTagName("TD")[Columsort];
+                    //check if the two rows should switch place:
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+                                    </script>
 </body>
 
 	<!--   Core JS Files   -->

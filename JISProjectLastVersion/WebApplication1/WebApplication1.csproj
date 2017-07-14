@@ -254,17 +254,6 @@
     <Content Include="InterfaceFinish\ConsultCreateTS.aspx" />
     <Content Include="InterfaceFinish\ConsultViewTS.aspx" />
     <Content Include="InterfaceFinish\WebForm10.aspx" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\.gitignore" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\GruntFile.js" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.css" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.js" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.min.js" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\bootstrap-datepicker.css" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\bootstrap-datepicker.js" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\glyphicons-halflings.png" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\screenshot.png" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\site.css" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\lib\site.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\jquery.timepicker.css" />
     <Content Include="Scripts\jquery.timepicker.js" />
@@ -286,28 +275,6 @@
     <Content Include="InterfaceVersion\assets02\js\ct-paper.js" />
     <Content Include="InterfaceVersion\assets02\js\jquery-1.10.2.js" />
     <Content Include="InterfaceVersion\assets02\js\jquery-ui-1.10.4.custom.min.js" />
-    <Content Include="InterfaceVersion\assets02\paper_img\banks.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\bg_wall.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\built_on_glass.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\cat.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\chet_faker_1.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\chet_faker_2.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\city.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\examples\landing.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\examples\profile.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\examples\register.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\favicon.ico" />
-    <Content Include="InterfaceVersion\assets02\paper_img\flume.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\lamp.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\landscape.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\new_logo.png" />
-    <Content Include="InterfaceVersion\assets02\paper_img\pencils.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\placeholder.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\red.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\shoes.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\thinking_in_textures.png" />
-    <Content Include="InterfaceVersion\assets02\paper_img\types.jpg" />
-    <Content Include="InterfaceVersion\assets02\paper_img\wall-dark.jpg" />
     <Content Include="InterfaceVersion\assets\css\bootstrap.min.css" />
     <Content Include="InterfaceVersion\assets\css\demo.css" />
     <Content Include="InterfaceVersion\assets\css\material-dashboard.css" />
@@ -341,23 +308,10 @@
     <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="InterfaceVersion\bootstrap3\js\bootstrap.js" />
     <Content Include="InterfaceVersion\bootstrap3\js\bootstrap.min.js" />
-    <Content Include="InterfaceVersion\components.html" />
-    <Content Include="InterfaceVersion\examples\dashboard.html" />
-    <Content Include="InterfaceVersion\examples\icons.html" />
-    <Content Include="InterfaceVersion\examples\maps.html" />
-    <Content Include="InterfaceVersion\examples\notifications.html" />
-    <Content Include="InterfaceVersion\examples\table.html" />
-    <Content Include="InterfaceVersion\examples\template.html" />
-    <Content Include="InterfaceVersion\examples\typography.html" />
-    <Content Include="InterfaceVersion\examples\upgrade.html" />
-    <Content Include="InterfaceVersion\examples\user.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="InterfaceVersion\index.html" />
-    <Content Include="InterfaceVersion\template.html" />
-    <Content Include="InterfaceVersion\tutorial.html" />
     <Content Include="Logotransparent.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -398,7 +352,6 @@
     <Content Include="InterfaceVersion\assets\sass\md\_togglebutton.scss" />
     <Content Include="InterfaceVersion\assets\sass\md\_typography.scss" />
     <Content Include="InterfaceVersion\assets\sass\md\_variables.scss" />
-    <Content Include="InterfaceVersion\assets02\.DS_Store" />
     <Content Include="InterfaceVersion\assets02\css\.DS_Store" />
     <Content Include="InterfaceVersion\assets02\fonts\.DS_Store" />
     <Content Include="InterfaceVersion\assets02\img\.DS_Store" />
@@ -412,40 +365,6 @@
     <Content Include="InterfaceVersion\assets02\img\tables\.DS_Store" />
     <Content Include="InterfaceVersion\assets02\js\.DS_Store" />
     <Content Include="InterfaceVersion\assets02\js\presentation-page\.DS_Store" />
-    <Content Include="InterfaceVersion\assets02\sass\.DS_Store" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\.DS_Store" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_buttons.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_inputs.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_labels.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_navbars.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_tabs.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_transparency.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\mixins\_vendor-prefixes.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_alerts.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_buttons.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_carousel.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_checkbox-radio.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_collapse.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_datepicker.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_dropdown.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_images.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_inputs.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_labels.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_misc.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_mixins.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_modal.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_navbars.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_progress-bars.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_responsive.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_sections.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_sliders.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_tabs-navs-pagination.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_tooltips-and-popovers.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_typography.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\ct-paper\_variables.scss" />
-    <Content Include="InterfaceVersion\assets02\sass\examples.scss" />
-    <Content Include="InterfaceVersion\assets02\video\.DS_Store" />
     <Content Include="InterfaceVersion\bootstrap3\.DS_Store" />
     <Content Include="InterfaceVersion\bootstrap3\css\.DS_Store" />
     <Content Include="InterfaceVersion\bootstrap3\fonts\fontawesome-webfont.eot" />
@@ -455,10 +374,6 @@
     <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="InterfaceVersion\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\bower.json" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jt.timepicker.jquery.json" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\package.json" />
-    <Content Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\README.md" />
     <Content Include="InterfaceFinish\Consult.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -498,8 +413,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
-    <Folder Include="NewFolder1\" />
-    <Folder Include="NewFolder2\" />
     <Folder Include="Views\ApTS\" />
   </ItemGroup>
   <ItemGroup>
@@ -516,9 +429,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="InterfaceVersion\jonthornton-jquery-timepicker-3f26316\jquery.timepicker.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -11,7 +11,11 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = getsession();
+        }
+        public string getsession()
+        {
+            return Session["userid"].ToString();
         }
     }
 }

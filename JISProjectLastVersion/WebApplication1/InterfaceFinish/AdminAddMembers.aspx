@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <form  runat="server">
+    
         <div class="card-header" data-background-color="purple">
 	                                <h4 class="title">ADD Profile</h4>
 									<p class="category">Complete your Employee profile</p>
@@ -96,8 +96,8 @@
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 
         <asp:Button ID="UpdateProfile" runat="server" Text="Update Profile" type="submit" CssClass="btn btn-primary pull-right" OnClick="UpdateProfile_Click" />
-
+            <asp:Button ID="Button1" runat="server" Text="Button" />
  </div> 
-    </form>
+    
     
 </asp:Content>

@@ -29,13 +29,13 @@ namespace WebApplication1.InterfaceFinish
 
             if (!Page.IsPostBack)
             {
-
                 
             }
-            //if (Session["type"] == null)
-            //{
-            //    Response.Redirect("Index.aspx");
-            //}
+
+            if (Session["type"] == null ||Session["type"].ToString() != "Admin" )
+            {
+                Response.Redirect("Index.aspx");
+            }
         }
         
         protected void UpdateProfile_Click(object sender, EventArgs e)
@@ -109,7 +109,10 @@ namespace WebApplication1.InterfaceFinish
 
         }
 
-        
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+        }
 
     }
 

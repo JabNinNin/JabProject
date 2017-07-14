@@ -23,7 +23,7 @@ namespace WebApplication1.App_code
             ModelTS ListinTS;
 
             //ดึง list log
-            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].description  
+            string queryString = @"SELECT [timesheets].[id],[project].projectname, [userprofile].firstname+' '+[userprofile].lastname as Name  ,[timesheets].datework as DateWork, [work_hr] as 'WorkHours', [project].end_date as Enddate ,status,[timesheets].desciption  
  FROM [timesheets] Inner Join [project] ON [project].[id] =  [timesheets].[project_id]Inner Join [userprofile] ON [userprofile].[id] =  [timesheets].[employee_id]where [timesheets].[status]='pending'" ;
             con.Open(); /*+เดี่ยวกลับมาแก้ใส่session +*/
              SqlCommand command = new SqlCommand(queryString, con);
@@ -37,7 +37,7 @@ namespace WebApplication1.App_code
                 ListinTS.FristnameLastname = (string)reader["Name"];
                 ListinTS.Worktime = Convert.ToString(reader["WorkHours"]);
                 ListinTS.DateTS = Convert.ToString(((DateTime)reader["DateWork"]).ToString("dd/MM"));
-                ListinTS.Description = Convert.ToString(reader["Description"]);
+                ListinTS.Description = Convert.ToString(reader["Desciption"]);
                 ListinTS.Checkstatus =(DateTime)reader["Enddate"];
                 if(DateToday<ListinTS.Checkstatus|| DateToday == ListinTS.Checkstatus)
                 {   ListinTS.status = "In Time";
@@ -117,24 +117,7 @@ namespace WebApplication1.App_code
             con.Close();
             return user;
         }
-        public static void editUserPJ(Modelproject user)
-        {   
-            string queryString =
-         "update project set projectname=@ProjectName ,start_date=@StartDate,end_date=@EndDate,desciption=@Description,Information=@Information where id=@id ";
-            con.Open();
-            SqlCommand command = new SqlCommand(queryString, con);
-            command.Parameters.AddWithValue("@id", user.id);
-            command.Parameters.AddWithValue("@ProjectName", user.ProjectName);
-            command.Parameters.AddWithValue("@StartDate",Convert.ToDateTime(  user.StartDate));
-            command.Parameters.AddWithValue("@EndDate", Convert.ToDateTime(user.EndDate));
-            command.Parameters.AddWithValue("@Description", user.Description);
-            command.Parameters.AddWithValue("@Information", user.Information);
-            command.ExecuteNonQuery();
-            con.Close();
-            
-            
-            
-        }
+        
 
     }
 }

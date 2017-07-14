@@ -49,7 +49,7 @@ namespace WebApplication1
                 if (reader["position"].ToString() == "Admin")
                 {
                     Session["userid"] = reader["id"].ToString();
-                    Session["type"] = "Addmin";
+                    Session["type"] = "Admin";
                     Response.Redirect("AdminViewTS.aspx");
                 }
 

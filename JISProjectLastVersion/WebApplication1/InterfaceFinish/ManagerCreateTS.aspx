@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InterfaceFinish/Manager.Master" AutoEventWireup="true" CodeBehind="ManagerCreateTS.aspx.cs" Inherits="WebApplication1.InterfaceFinish.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server"><div class="sidebar-wrapper">
   
-   
+   <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
         
 				<ul class="nav">
     <li >
@@ -39,25 +39,27 @@
                                            <div class="col-md-3">
                                                     <div class="form-group label-floating">
                                                             
-                                                        <asp:DropDownList ID="DropDownList1" runat="server" Cssclass="form-control"  DataSourceID ="SqlDataSource1" DataTextField="projectname" DataValueField="projectname" >
+                                                        <asp:DropDownList ID="DropDownList1" runat="server" Cssclass="form-control"  DataSourceID ="SqlDataSource1" DataTextField="projectname" DataValueField="project_id" >
                                                             </asp:DropDownList>
-                                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="select [project].projectname from Assign 
-Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_id] = @id)">
+                                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="select [project].projectname ,[Assign].project_id from Assign 
+Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_id] = @id)" >
                                                                 <SelectParameters>
                                                                     <asp:SessionParameter Name="id" SessionField="userid" Type="Int32" />
                                                                 </SelectParameters>
                                                         </asp:SqlDataSource>
                                                                             </div>
                                                </div>
-                                           <div class="col-md-3">
+                                           <div class="col-md-2">
                                                     <div class="form-group label-floating">
                                                              
                                                                     <div class="demo ">
                 
 
                 <p id="datepairExample">
-                    <input type="text" class="date start form-control " placeholder="Date"/>
-                    
+                    <input id="DateTS" runat="server" type="text"  placeholder="Date"/>
+                   
+                    <asp:TextBox ID="DateTS2" runat="server" class="date start form-control " ></asp:TextBox>
+
                 </p>
             </div>
 
@@ -79,13 +81,12 @@ Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_
                                                    
                                                                              </div>
                                                                             </div>
-                                           
-                                           <div class="col-md-3">
+                                           <div class="col-md-2">
                                                     <div class="form-group label-floating">
                                                              
                                                      <p id="datepairExample01">
                     
-                    <input type="text" class="time start form-control" placeholder="StartTime"/> 
+                    <input type="text" id="starttime" runat="server" class="time start form-control" placeholder="StartTime"/> 
                     
                                         </p>
                                                          <script src="http://jonthornton.github.io/Datepair.js/dist/datepair.js"></script>
@@ -93,7 +94,7 @@ Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_
             <script>
                 $('#datepairExample01 .time').timepicker({
                     'showDuration': true,
-                    'timeFormat': 'g:ia'
+                    'timeFormat': 'H:i '
                 });
 
                 $('#datepairExample01 .date').datepicker({
@@ -106,13 +107,13 @@ Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_
                                             
                                                                              </div>
                                                                             </div>
-                                           <div class="col-md-3">
+                                           <div class="col-md-2">
                                                     <div class="form-group label-floating">
                                                              
                                                                     
                                                            <p id="datepairExample02">
                     
-                    <input type="text" class="time end form-control" placeholder="EndTime" /> 
+                    <input type="text" runat="server" id="endtime" class="time end form-control" placeholder="EndTime" /> 
                     
                                         </p>
                                                          <script src="http://jonthornton.github.io/Datepair.js/dist/datepair.js"></script>
@@ -120,7 +121,7 @@ Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_
             <script>
                 $('#datepairExample02 .time').timepicker({
                     'showDuration': true,
-                    'timeFormat': 'g:ia'
+                    'timeFormat': 'H:i'
                 });
 
                 $('#datepairExample02 .date').datepicker({
@@ -133,21 +134,39 @@ Inner Join [project] ON [project].[id] =  [Assign].[project_id]where ([employee_
                                             
                                                                              </div>
                                                                             </div>
+                                           <div class="col-md-3">
+                                                    <div class="form-group label-floating">
+                                                        <asp:TextBox ID="TextBox1"  CssClass="form-control" runat="server" ReadOnly="true" ></asp:TextBox>
+                                                        
+                                                                            </div>
+                                               </div>
                                          </div>
     
                                     <div class="row">
 	                                        <div class="col-md-12">
 	                                            <div class="form-group">
 													<div class="form-group label-floating">
-									    				<label class="control-label">Add Description on here</label>
-								    					<textarea class="form-control" rows="3"></textarea>
-		                        					</div>
+									    				<label class="control-label">Add Desciption on here</label>
+								    					<textarea id="Desciption" runat="server" class="form-control" rows="3"></textarea>
+		                        					<asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                                                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                                                    
+                                                    
+                                                    </div>
 	                                            </div>
 	                                        </div>
 	                                    </div>
-<asp:Button ID="Button1" runat="server" Text="Button" />
-	                                    <button type="submit" class="btn btn-primary pull-right">Add row TimeSheet</button>
-	                                    <div class="clearfix"></div>
+                                        
+	                                    <asp:Button type="submit" ID="uu" runat="server" class="btn btn-primary pull-right" CssClass="btn btn-primary pull-right" Text="Add row Timesheets" OnClick="Unnamed_Click"/>
+	                                    <div class="clearfix">
+                                            <%--<asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="projectname" DataValueField="id">
+                                            </asp:DropDownList>
+                                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="select [project].projectname ,Assign.id from Assign Inner Join [project] ON [project].[id] = [Assign].[project_id]WHERE ([employee_id] = @employee_id)">
+                                                <SelectParameters>
+                                                    <asp:Parameter Name="employee_id" />
+                                                </SelectParameters>
+                                            </asp:SqlDataSource>--%>
+                                       </div>
 	                            </div>
 
 	                        </div>
